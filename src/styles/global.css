@@ -1,1 +1,17 @@
+@import "@fontsource/inder";
+@import "@fontsource-variable/inter";
 @import "tailwindcss";
+
+
+
+
+.inder-sans {
+    font-family: 'Inder', sans-serif;
+}
+
+body {
+    /* font-family: 'Inder', sans-serif; */
+      font-family: 'Inter Variable', sans-serif;
+      font-weight: 400;
+
+}

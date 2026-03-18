@@ -1,5 +1,28 @@
-<div
-  class="flex flex-col justify-center max-w-3xl mx-auto items-center h-screeen bg-red-300"
->
-  <h1>rebhew.app</h1>
+---
+import { SubscribeModal } from "./SubscribeModal";
+---
+
+<div class="flex h-screen flex-col items-center justify-center gap-3">
+  <div class="image w-20 h-20 bg-emerald-400 rounded-full"></div>
+
+  <h1 class="inder-sans text-3xl">rebhew.app</h1>
+
+  <p class="text-base">Collecting Reviews Made Easy.</p>
+
+  <a
+    href="#subscribe-modal"
+    rel="modal:open"
+    class="bg-[#00FF3C] px-10 py-2 text-lg w-max"
+  >
+    Join our Waitlist
+  </a>
 </div>
+
+<div id="subscribe-modal" class="modal">
+  <SubscribeModal />
+</div>
+
+<script>
+  // @ts-ignore
+  $("#subscribe-modal").modal({});
+</script>
