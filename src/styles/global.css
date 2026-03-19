@@ -2,6 +2,10 @@
 @import "@fontsource-variable/inter";
 @import "tailwindcss";
 
+@plugin "daisyui" {
+    prefix: "d-";
+    themes: light --default
+}
 
 
 
@@ -11,7 +15,13 @@
 
 body {
     /* font-family: 'Inder', sans-serif; */
-      font-family: 'Inter Variable', sans-serif;
-      font-weight: 400;
+    font-family: 'Inter Variable', sans-serif;
+    font-weight: 400;
 
+}
+
+
+/* close button animation for modal */
+.close-modal {
+    @apply hover:rotate-90 transition-all duration-300
 }

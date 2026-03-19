@@ -5,7 +5,19 @@ import { SubscribeModal } from "./SubscribeModal";
 <div class="flex h-screen flex-col items-center justify-center gap-3">
   <div class="image w-20 h-20 bg-emerald-400 rounded-full"></div>
 
-  <h1 class="inder-sans text-3xl">rebhew.app</h1>
+  <div class="d-tooltip">
+    <div class="d-tooltip-content">
+      <div class="flex flex-row items-center">
+        <p>a project by</p>
+        <img
+          src="https://github.com/prasuco.png"
+          class="w-22 h-8 object-cover"
+        />
+      </div>
+    </div>
+
+    <h1 class="inder-sans text-3xl">rebhew.app</h1>
+  </div>
 
   <p class="text-base">Collecting Reviews Made Easy.</p>
 
@@ -24,5 +36,5 @@ import { SubscribeModal } from "./SubscribeModal";
 
 <script>
   // @ts-ignore
-  $("#subscribe-modal").modal({});
+  // $("#subscribe-modal").modal({});
 </script>
