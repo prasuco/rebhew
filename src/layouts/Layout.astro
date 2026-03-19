@@ -1,21 +1,63 @@
 ---
 import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title = "rebhew - Collect Reviews That Actually Matter",
+  description = "rebhew helps businesses gather authentic customer reviews effortlessly. Beautiful review pages, smart collection tools, and actionable insights to build trust and grow.",
+  ogImage = "/og-image.png",
+} = Astro.props;
+
+const siteUrl = "https://rebhew.prasuco.com";
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <!-- Remember to include jQuery :) -->
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Prasuco" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, siteUrl)} />
+    <meta property="og:site_name" content="Rebhew" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@rebhew" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, siteUrl)} />
+
+    <meta name="theme-color" content="#00FF3C" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"
     ></script>
-
-    <!-- jQuery Modal -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"
     ></script>
@@ -23,7 +65,29 @@ import "../styles/global.css";
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
     />
-    <title>rebhew | making review collection easy</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Rebhew",
+        "description": "Review collection platform that helps businesses gather authentic customer reviews effortlessly.",
+        "url": "https://rebhew.prasuco.com",
+        "applicationCategory": "BusinessApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Free early access"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Prasuco",
+          "url": "https://prasuco.com",
+          "logo": "https://github.com/prasuco.png"
+        }
+      }
+    </script>
   </head>
   <body>
     <slot />

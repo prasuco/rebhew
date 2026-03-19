@@ -1,33 +1,43 @@
 ---
 import { SubscribeModal } from "./SubscribeModal";
+import { ArrowRight } from "lucide-react";
 ---
 
-<div class="flex h-screen flex-col items-center justify-center gap-3">
-  <div class="image w-20 h-20 bg-emerald-400 rounded-full"></div>
-
-  <div class="d-tooltip">
-    <div class="d-tooltip-content">
-      <div class="flex flex-row items-center">
-        <p>a project by</p>
-        <img
-          src="https://github.com/prasuco.png"
-          class="w-22 h-8 object-cover"
-        />
-      </div>
+<div
+  class="max-w-3xl mx-auto text-center flex flex-col items-center justify-center"
+>
+  <div class="-mt-20 flex flex-col items-center justify-center h-screen gap-4">
+    <div class="heading inder-sans text-2xl font-semibold p-2">
+      rebhew.prasuco.com
+    </div>
+    <div
+      class="coming-soon rounded-full border px-2 bg-primary/15 font-accent-content animate-bounce"
+    >
+      Coming Soon
+    </div>
+    <h2 class="cta-main-text font-semibold text-4xl md:text-7xl text-center">
+      Collect Reviews That
+      <br />
+      <span
+        class="bg-[linear-gradient(90deg,#10B981_0%,#84CC16_100%)] bg-clip-text text-transparent"
+      >
+        Actually Matter
+      </span>
+    </h2>
+    <div class="text-lg md:text-xl text-slate-600">
+      Transform customer feedback into growth. Rebhew helps you gather authentic
+      reviews, showcase social proof, and build the trust your business
+      deserves.
     </div>
 
-    <h1 class="inder-sans text-3xl">rebhew.app</h1>
+    <a
+      href="#subscribe-modal"
+      rel="modal:open"
+      class="bg-[#00FF3C] px-10 py-2 text-lg w-max flex items-center"
+    >
+      Get Early Access <ArrowRight />
+    </a>
   </div>
-
-  <p class="text-base">Collecting Reviews Made Easy.</p>
-
-  <a
-    href="#subscribe-modal"
-    rel="modal:open"
-    class="bg-[#00FF3C] px-10 py-2 text-lg w-max"
-  >
-    Join our Waitlist
-  </a>
 </div>
 
 <div id="subscribe-modal" class="modal">

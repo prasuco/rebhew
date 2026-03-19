@@ -13,5 +13,6 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
+  site: "https://rebhew.prasuco.com",
   integrations: [react()]
 });
