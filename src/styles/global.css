@@ -25,3 +25,38 @@ body {
 .close-modal {
     @apply hover:rotate-90 transition-all duration-300
 }
+
+@plugin "daisyui/theme" {
+  name: "cyberpunk";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(98% 0.001 106.423);
+  --color-base-200: oklch(97% 0.001 106.424);
+  --color-base-300: oklch(92% 0.003 48.717);
+  --color-base-content: oklch(21% 0.006 56.043);
+  --color-primary: oklch(71% 0.203 305.504);
+  --color-primary-content: oklch(29% 0.149 302.717);
+  --color-secondary: oklch(75% 0.183 55.934);
+  --color-secondary-content: oklch(26% 0.079 36.259);
+  --color-accent: oklch(82% 0.189 84.429);
+  --color-accent-content: oklch(27% 0.077 45.635);
+  --color-neutral: oklch(26% 0.007 34.298);
+  --color-neutral-content: oklch(98% 0.001 106.423);
+  --color-info: oklch(74% 0.16 232.661);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(77% 0.152 181.912);
+  --color-success-content: oklch(27% 0.046 192.524);
+  --color-warning: oklch(82% 0.189 84.429);
+  --color-warning-content: oklch(27% 0.077 45.635);
+  --color-error: oklch(71% 0.202 349.761);
+  --color-error-content: oklch(28% 0.109 3.907);
+  --radius-selector: 2rem;
+  --radius-field: 0rem;
+  --radius-box: 0.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 1;
+}
