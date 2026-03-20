@@ -6,7 +6,7 @@ export const SubscribeModal = () => {
       <h2 className='text-center text-2xl font-semibold'>
         Join our Waitlist
       </h2>
-      <form action="https://forminit.com/f/lea8hdeo1i7/" method='POST' className='flex flex-col'>
+      <form action="https://forminit.com/f/lea8hdeo1i7/" method='POST' className='flex flex-col gap-2'>
         <fieldset className="d-fieldset">
           <legend className="d-fieldset-legend ">What is your name?</legend>
           <input name="name" type="text" className="d-input w-full" placeholder="Your name please" />
