@@ -1,4 +1,5 @@
 ---
+import Navbar from "../components/Navbar.astro";
 import "../styles/global.css";
 
 interface Props {
@@ -8,12 +9,12 @@ interface Props {
 }
 
 const {
-  title = "rebhew - Collect Reviews That Actually Matter",
-  description = "rebhew helps businesses gather authentic customer reviews effortlessly. Beautiful review pages, smart collection tools, and actionable insights to build trust and grow.",
+  title = "rebheu - Collect Reviews That Actually Matter",
+  description = "rebheu helps businesses gather authentic customer reviews effortlessly. Beautiful review pages, smart collection tools, and actionable insights to build trust and grow.",
   ogImage = "/og-image.png",
 } = Astro.props;
 
-const siteUrl = "https://rebhew.prasuco.com";
+const siteUrl = "https://rebheu.prasuco.com";
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
 ---
 
@@ -38,10 +39,10 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(ogImage, siteUrl)} />
-    <meta property="og:site_name" content="Rebhew" />
+    <meta property="og:site_name" content="rebheu" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@rebhew" />
+    <meta name="twitter:site" content="@rebheu" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={new URL(ogImage, siteUrl)} />
@@ -70,9 +71,9 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "Rebhew",
+        "name": "rebheu",
         "description": "Review collection platform that helps businesses gather authentic customer reviews effortlessly.",
-        "url": "https://rebhew.prasuco.com",
+        "url": "https://rebheu.prasuco.com",
         "applicationCategory": "BusinessApplication",
         "offers": {
           "@type": "Offer",
@@ -90,6 +91,7 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
     </script>
   </head>
   <body>
+    <Navbar />
     <slot />
   </body>
 </html>
