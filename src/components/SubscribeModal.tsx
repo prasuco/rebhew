@@ -17,7 +17,7 @@ export const SubscribeModal = () => {
           <input name="email" type="email" className="d-input w-full" placeholder="Your Best Email" />
         </fieldset>
 
-        <button type="submit" className="d-btn d-btn-primary ">
+        <button type="submit" className="d-btn d-btn-neutral ">
           Submit
         </button>
       </form>
