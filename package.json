@@ -6,12 +6,13 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev",
+    "dev": "portless run astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/netlify": "^7.0.4",
     "@astrojs/react": "^5.0.0",
     "@fontsource-variable/inter": "^5.2.8",
     "@fontsource/inder": "^5.2.8",

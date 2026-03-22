@@ -24,3 +24,6 @@ pnpm-debug.log*
 .idea/
 
 /generated/prisma
+
+# Local Netlify folder
+.netlify
