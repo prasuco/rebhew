@@ -19,6 +19,3 @@ model User {
   email    String @unique
   password String
 }
-
-
-

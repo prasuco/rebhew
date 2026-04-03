@@ -11,10 +11,14 @@ export const SubscribeModal = () => {
           <legend className="d-fieldset-legend ">What is your name?</legend>
           <input name="name" type="text" className="d-input w-full" placeholder="Your name please" />
         </fieldset>
+        <fieldset className="d-fieldset">
+          <legend className="d-fieldset-legend ">What is your phone no?</legend>
+          <input name="phone" type="number" className="d-input w-full" placeholder="Your Phone Number" />
+        </fieldset>
 
         <fieldset className="d-fieldset">
           <legend className="d-fieldset-legend ">What is your email?</legend>
-          <input name="email" type="email" className="d-input w-full" placeholder="Your Best Email" />
+          <input name="email" type="email" className="d-input w-full" placeholder="Your Best Email (optional)" />
         </fieldset>
 
         <button type="submit" className="d-btn d-btn-neutral ">
